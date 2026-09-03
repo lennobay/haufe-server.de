@@ -1,0 +1,161 @@
+body{
+    margin: 0;
+    left: 0;
+    font-family: sans-serif;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: hsl(0 0% 10%);
+    padding: 1rem;
+    gap: 1rem;
+}
+img{
+    width: 800px
+}
+header a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: hsl(0 0% 10%);
+    color: hsl(0 0% 80%);
+}
+footer a{
+    text-decoration: none;
+    font-weight: bold;
+    color: hsl(0 0% 90%);
+}
+list-articles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFF07C;
+
+}
+
+.bbh-bogle-regular {
+  font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#top-article-list{
+    font-size: 6rem;
+    font-family: "BBH Bogle", sans-serif;
+}
+
+list-articles div{
+    max-width: 800px;
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+article-display a{
+    text-decoration: none;
+    color: black;
+}
+article-display a h1:hover{
+    text-decoration: underline;
+}
+articles-tags{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+articles-tags a{
+    color: hsl(0 0% 90%);
+    padding: 0.5rem;
+    font-weight: bold;
+    background-color: black;
+}
+articles-detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+
+}
+body-inner{
+    background-color: #437C90;
+}
+articles-detail-down{
+    max-width: 800px;
+    text-align: justify;
+    padding: 1rem;
+}
+articles-detail div{
+    padding: 1rem;
+}
+skills{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 4px;
+}
+skills-sub{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+skills-sub button{
+    background-color: black;
+    color: hsl(0 0% 80%);
+    font-weight: bold;
+    border: none;
+}
+skills-sub button:hover{
+    background-color: hsl(0 0% 10%);
+}
+about h1,p{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 900px;
+}
+.special-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: "BBH Bogle", sans-serif;
+    font-size: 8rem;
+}
+about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@media (max-width: 1200px){
+    img{
+        width: 100%;
+    }
+    skills-sub{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 1fr;
+    }
+    article-display{
+        padding: 1rem;
+    }
+    footer{
+        padding-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+}

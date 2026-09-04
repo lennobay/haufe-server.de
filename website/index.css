@@ -97,9 +97,6 @@ articles-detail-down{
     text-align: justify;
     padding: 1rem;
 }
-articles-detail div{
-    padding: 1rem;
-}
 skills{
     display: flex;
     flex-direction: column;
@@ -121,7 +118,7 @@ skills-sub button{
 skills-sub button:hover{
     background-color: hsl(0 0% 10%);
 }
-about h1,p{
+about h1{
     display: flex;
     flex-direction: column;
     padding: 1rem;

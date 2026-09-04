@@ -10,7 +10,7 @@ import (
 
 var data_articles_index string = ""
 var top string = "<!doctype html><html lang='en'><head><meta charset='UTF-8' /><meta name='viewport' content='width=device-width, initial-scale=1.0' /><title>Haufenet</title><link rel='stylesheet' href='/index.css' /><link rel='icon' type='image/png' href='/favicon-96x96.png' sizes='96x96'/><link rel='icon' type='image/svg+xml' href='/favicon.svg'/><link rel='shortcut icon' href='/favicon.ico' /><link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' /><link rel='manifest' href='/site.webmanifest' /><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap' rel='stylesheet'></head><body><header><a href='/' ><b>Haufenet</b></a></header>"
-var bottom string = "<footer><p>&copy Lennard Haufe<p><p>Running on net/http GO</p><p>No usage of AI</p><a href='/imprint_privacy/'>Imprint and Privacy</a></footer></body><script src='/index.js'></script></html>"
+var bottom string = "<footer><p>&copy Lennard Haufe<p><p>Compiled with GO</p><p>No usage of AI</p><a href='/imprint_privacy/'>Imprint and Privacy</a></footer></body><script src='/index.js'></script></html>"
 var tag_collection string = ""
 
 func main() {
@@ -36,7 +36,7 @@ func main() {
 }
 func EditArticlesPage() {
 
-	err := os.WriteFile("./website/articles/index.html", []byte(top+"<list-articles><h1 id='top-article-list'>Articles</h1><div>"+data_articles_index+"</div></list-articles>"+bottom), 0755)
+	err := os.WriteFile("./website/index.html", []byte(top+"<list-articles><h1 id='top-article-list'>Articles</h1><div>"+data_articles_index+"</div></list-articles>"+bottom), 0755)
 	if err != nil {
 		panic(err)
 	}
@@ -103,10 +103,10 @@ func AnalayzeFiles(filename string) {
 
 }
 func Page_Collection_Overview_Articles(filename string, title string, image string, description string, tags string) {
-	data_articles_index += "<article-display><a href='/articles/" + filename + ".html'>" + title + image + description + "</a>" + tags + "</article-display>"
+	data_articles_index += "<article-display><a href='/articles/" + filename + ".html'>" + title + image + description + "</a></article-display>"
 }
 func Page_Article(filename string, text string, tags string) {
-	err := os.WriteFile("./website/articles/"+filename+".html", []byte(top+"<articles-detail><articles-detail-down>"+text+"<h4>Tags</h4>"+tags+"<br></articles-detail-down></articles-detail>"+bottom), 0755)
+	err := os.WriteFile("./website/articles/"+filename+".html", []byte(top+"<articles-detail><articles-detail-down>"+text+"<br></articles-detail-down></articles-detail>"+bottom), 0755)
 	if err != nil {
 		panic(err)
 	}

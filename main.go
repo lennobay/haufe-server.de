@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"log"
-	"net/http"
 	"os"
 	"strings"
 )
@@ -25,13 +24,13 @@ func main() {
 	log.Print("Server running on port 8090")
 	EditArticlesPage()
 	ReadFileOthers("imprint_privacy.md")
-	fileserver := http.FileServer(http.Dir("./website"))
+	/* 	fileserver := http.FileServer(http.Dir("./website"))
 
-	http.Handle("/", fileserver)
+	   	http.Handle("/", fileserver)*/
 
-	if err := http.ListenAndServe(":8090", nil); err != nil {
+	/*	if err := http.ListenAndServe(":8090", nil); err != nil {
 		log.Fatal(err)
-	}
+		} */
 
 }
 func EditArticlesPage() {

@@ -9,7 +9,7 @@ import (
 )
 
 var data_articles_index string = ""
-var top string = "<!doctype html><html lang='en'><head><meta charset='UTF-8' /><meta name='viewport' content='width=device-width, initial-scale=1.0' /><title>Haufenet</title><link rel='stylesheet' href='/index.css' /><link rel='icon' type='image/png' href='/favicon-96x96.png' sizes='96x96'/><link rel='icon' type='image/svg+xml' href='/favicon.svg'/><link rel='shortcut icon' href='/favicon.ico' /><link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' /><link rel='manifest' href='/site.webmanifest' /><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap' rel='stylesheet'></head><body><header><a href='/' ><b>Haufenet</b></a></header>"
+var top string = "<!doctype html><html lang='en'><head><meta charset='UTF-8' /><meta name='viewport' content='width=device-width, initial-scale=1.0' /><title>Haufe Blog</title><link rel='stylesheet' href='/index.css' /><link rel='icon' type='image/png' href='/favicon-96x96.png' sizes='96x96'/><link rel='icon' type='image/svg+xml' href='/favicon.svg'/><link rel='shortcut icon' href='/favicon.ico' /><link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' /><link rel='manifest' href='/site.webmanifest' /><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap' rel='stylesheet'></head><body><header><a href='/' ><b>Haufe Blog</b></a></header>"
 var bottom string = "<footer><p>&copy Lennard Haufe<p><p>Compiled with GO</p><p>No usage of AI</p><a href='/imprint_privacy/'>Imprint and Privacy</a></footer></body><script src='/index.js'></script></html>"
 var tag_collection string = ""
 
@@ -80,6 +80,9 @@ func AnalayzeFiles(filename string) {
 		} else if strings.Contains(content, "DESCRIPTION:") {
 
 			end_text_page_article = ""
+		} else if strings.Contains(content, "DATE:") {
+			part := strings.Split(content, "DATE:")
+			end_text_page_article += "<i>" + part[1] + "</i><br>"
 		} else if strings.Contains(content, "TAGS:") {
 			part := strings.Split(content, `TAGS:`)
 			part_2 := strings.Split(part[1], ",")

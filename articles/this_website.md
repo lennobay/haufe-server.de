@@ -1,9 +1,12 @@
 # This Website
-DESCRIPTION:This Website had a lot of diffrent version, featuring diffrent styles...
-TAGS:projects,css,html,coding
-HEADIMAGE:another.png
-This Website had a lot of diffrent version, featuring diffrent styles. Everytime I recreate it, I say "this will be the version I will continue on", but then I make a change to it or am unhappy with it. So I create a new Version, mostly from scratch. If I would be honest I could call this version of the Website v20 at least, but I will call it v1.
-## The "Technology" behind it
-I use golang to run the http server and to compile my md files to a static website. I use md over html, becaus first one  always needs to add "<>" and at the end "</>" of every text element, this makes it a long and fustrating process to write it. Additionaly one needs to add the head, the header and the footer to every file seperatly.This makes changing a style outside the universal css file more complicated. This means that one thinks of a new header structure, every header in every file needs to be changed. Which can be done of course with a IDE and its "occurences-tool", but this process does not ensure correct result. Leading to error this makes the progess even longer, then with the compalation method.
-## Usage of the Website
-This website is being populated with diffent informations such as projects, documentations and comments on diffrent technical standpoints. I will use it to improve my english level. So if you are an born english speaker, please be so kind and report any erros to me.
+DESCRIPTION:The creation of this website had multiple phases in life, just like a child. First my experiments with css and html where quite terrible than I switched to a website with a neobrutalistic style but had on both no real content and ...
+TAGS:wellbeing
+DATE:08.09.2026
+HEADIMAGE:picture_zed_programming_this_website.png
+The creation of this website had multiple phases in life, just like a child. First my experiments with css and html where quite terrible than I switched to a website with a neobrutalistic style but had on both no real content and finally I decided that old style is good style. With that I mean that you just have a website with articles and that is it. No beautiful startpage, nothing, just content.
+## Compilation of the Site
+So you might think, what do you mean by compilation of a Site, but hear me out. I am using golang to convert my md files into html. This helps me to create a index of articles, without righting to a JSON file, but rather just right all metadata at the top of the file. When compiling the index generator just picks every file and reads out what is written in it and puts it together.
+To read the file in the correct it utilises the idea of new lines and puts looks if the contain certain trademarks. These trademarks can be hastags or also selfmade trademarks for metadata. Then every line that for example has an hastag in it, will be made a h1 element. Selfmade trademarks also follow the same idea and data after HEADIMAGE gets convertet into the top picture.
+So I use no DB, therefore no backend and can just be sure that I am not being hacked. This systen is not complete, at least yet at the moment of righting as I need coding fields and other elements to it.
+## The Future
+When further developing this Website I hope to make it as perfect as I want to and find some users on the internet that want to read it. It will definetly contain an about be section as well as projects. As soon as I continue them(I have a habit of forgetting them).

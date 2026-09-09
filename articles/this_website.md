@@ -1,7 +1,7 @@
 # This Website
 DESCRIPTION:The creation of this website had multiple phases in life, just like a child. First my experiments with css and html where quite terrible than I switched to a website with a neobrutalistic style but had on both no real content and ...
 TAGS:wellbeing
-DATE:08.09.2026
+DATE:08.09.2026 - Updated 09.09.2026
 HEADIMAGE:picture_zed_programming_this_website.png
 The creation of this website had multiple phases in life, just like a child. First my experiments with css and html where quite terrible than I switched to a website with a neobrutalistic style but had on both no real content and finally I decided that old style is good style. With that I mean that you just have a website with articles and that is it. No beautiful startpage, nothing, just content.
 ## Compilation of the Site
